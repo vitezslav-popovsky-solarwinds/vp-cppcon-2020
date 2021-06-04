@@ -1,0 +1,13 @@
+###############################################################################
+# Set default behavior to automatically normalize line endings.
+###############################################################################
+
+*         text=auto
+
+*.cs      text eol=crlf
+*.h       text eol=crlf
+*.cpp     text eol=crlf
+*.ixx     text eol=crlf
+*.csproj  text eol=crlf
+*.vcproj  text eol=crlf
+*.vcxproj text eol=crlf
