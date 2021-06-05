@@ -25,6 +25,22 @@ struct DefaultFormatter
     }
 };
 
+struct BetterFormatter
+{
+    template<is_series S, is_printer T>
+    void format(T t, S s)
+    {
+        if (!s.done())
+            t.print_element(s.next());
+        while (!s.done())
+        {
+            t.print_separator();
+            t.print_element(s.next());
+        }
+        t.print_eol();
+    }
+};
+
 
 template<
     typename S,
@@ -44,5 +60,5 @@ int main()
 
     len = 6;
     fib f2 = gen_fib(10, len);
-    print<fib, Printer, DefaultFormatter>(f2);
+    print<fib, Printer, BetterFormatter>(f2);
 }
