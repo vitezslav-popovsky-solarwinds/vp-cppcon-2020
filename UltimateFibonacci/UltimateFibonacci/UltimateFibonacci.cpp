@@ -9,6 +9,7 @@
 import FibCoroutines;
 import FibGenerator;
 import DefaultPrinter;
+import BetterPrinter;
 
 struct DefaultFormatter
 {
@@ -43,5 +44,5 @@ int main()
 
     len = 6;
     fib f2 = gen_fib(10, len);
-    print<fib, DefaultPrinter, DefaultFormatter>(f2);
+    print<fib, Printer, DefaultFormatter>(f2);
 }

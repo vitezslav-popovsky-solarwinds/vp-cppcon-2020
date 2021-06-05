@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BetterPrinter.ixx" />
     <ClCompile Include="default_printer.ixx" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
